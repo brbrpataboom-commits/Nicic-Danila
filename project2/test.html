@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Тест по истории — Школьные проекты</title>
+  <link rel="stylesheet" href="styles.test.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Тест по всеобщей истории</h1>
+    <form id="quizForm">
+      <div class="quiz-wrapper">
+        <div id="leftSidebar" class="sidebar left-sidebar">
+          <!-- фотографии слева -->
+          <img src="x1.jpg" alt="История 1" style="margin-top: 100px; margin-bottom: 20px;">
+          <img src="x3.jpg" alt="История 3" style="margin-top: 350px; margin-bottom: 20px;">
+          <img src="x7.jpg" alt="История 7" style="margin-top: 450px; margin-bottom: 20px;">
+          <img src="x9.jpg" alt="История 9" style="margin-top: 400px; margin-bottom: 20px;">
+        </div>
+        
+        <div id="questions" class="middle-column">
+          <!-- вопросы будут добавлены через JavaScript -->
+        </div>
+        
+        <div id="rightSidebar" class="sidebar right-sidebar">
+          <!-- фотографии справа -->
+          <img src="x2.jpg" alt="История 2" style="margin-top: 300px; margin-bottom: 20px;">
+          <img src="x6.jpg" alt="История 6" style="margin-top: 500px; margin-bottom: 20px;">
+          <img src="x4.jpg" alt="История 4" style="margin-top: 400px; margin-bottom: 20px;">
+          <img src="x8.jpg" alt="История 8" style="margin-top: 160px; margin-bottom: 20px;">
+        </div>
+      </div>
+
+      <div class="controls">
+        <button type="button" id="submitBtn" class="btn">Проверить</button>
+        <button type="reset" id="resetBtn" class="btn btn-secondary">Сбросить</button>
+      </div>
+    </form>
+
+    <div id="result" class="result" aria-live="polite"></div>
+  </main>
+
+  <script src="script.test.js"></script>
+</body>
+</html>

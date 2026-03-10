@@ -1,0 +1,329 @@
+<!-- Этот HTML-документ представляет собой личное портфолио разработчика, содержащее информацию о навыках, проектах и контактах. -->
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Заголовок документа с мета-тегами, заголовком страницы и ссылкой на файл стилей -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио студента-разработчика Василия Васильева: навыки, проекты и контакты">
+    <title>Портфолио Василия Васильева - Студент Разработчик</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Основное содержимое страницы -->
+<body>
+    <!-- Навигационная панель с логотипом и меню для перехода по разделам сайта -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+    <img src="logo.png" alt="Логотип" class="nav-logo-img" style="width: 30px; height:auto;">
+    <a href="#home" class="logo-link">
+        <span class="logo-text">Моё Портфолио</span>
+    </a>
+</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">О себе</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Навыки</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Проекты</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Образование</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция с приветствием, кратким описанием и стоковым фото-->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="hero-subtitle">Добро пожаловать в мое портфолио</p>
+                <h1 class="hero-title">Привет, я <span class="highlight">Василий Васильев</span></h1>
+                <p class="hero-description">Студент разработчик | Энтузиаст веб-технологий</p>
+                <p class="hero-bio">
+                  Разрабатываю современные интерфейсы с использованием HTML и JavaScript. Сосредоточен на создании чистого кода и изучении актуальных решений в области веб-технологий.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Связаться со мной</button>
+                    <button class="btn btn-secondary">Мои проекты</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="1.png" alt="Фото профиля">
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с информацией о себе, биографией и ключевыми качествами -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <h2 class="section-title">О себе</h2>
+            <p class="section-subtitle">Студент с большой страстью к технологиям и разработке</p>
+
+            <div class="about-bio">
+                <p>
+                    Привет! Я студент 3-го курса, специализирующийся на разработке программного обеспечения. Моё путешествие в мир программирования началось в старшей школе, когда я создал свой первый веб-сайт. С тех пор я непрерывно изучаю новые технологии и совершенствую свои навыки.
+                </p>
+            </div>
+
+            <div class="about-cards">
+                <div class="about-card">
+                    <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; margin:0 auto;">
+                        <img src="q1.png" alt="Целеустремлённость" style="width:100px; height:50px; display:block;">
+                    </div>
+                    <h3>Целеустремлённость</h3>
+                    <p>Всегда стремлюсь к совершенству в каждом проекте</p>
+                </div>
+                <div class="about-card">
+                    <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="q2.png" alt="Творческий подход" style="width:50px; height:50px; display:block;">
+                    </div>
+                    <h3>Творческий подход</h3>
+                    <p>Нахожу инновационные решения для сложных задач</p>
+                </div>
+                <div class="about-card">
+                   <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="q3.png" alt="Энтузиазм" style="width:50px; height:50px; display:block;">
+                    </div>
+                    <h3>Энтузиазм</h3>
+                    <p>Увлечён программированием и новыми технологиями</p>
+                </div>
+                <div class="about-card">
+                    <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="q4.png" alt="Профессионализм" style="width:50px; height:50px; display:block;">
+                    </div>
+                    <h3>Профессионализм</h3>
+                    <p>Ответственно подхожу к каждому заданию</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с перечислением технических навыков и инструментов -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Мои навыки</h2>
+            <p class="section-subtitle">Технологии и инструменты, с которыми я работаю</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="w1.png" alt="Фронтенд" style="width:50px; height:50px; display:block;">
+                    </div>
+                    </div>
+                    <h4>Фронтенд</h4>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                         <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="w2.png" style="width:50px; height:50px; display:block;">
+                    </div>
+                    </div>
+                    <h4>Бэкенд</h4>
+                    <ul class="skill-list">
+                        <li>Node.js</li>
+                        <li>C++</li>
+                        <li>SQL</li>
+                        <li>REST API</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="w3.png" style="width:50px; height:50px; display:block;">
+                    </div>
+                    </div>
+                    <h4>Дизайн</h4>
+                    <ul class="skill-list">
+                        <li>Figma</li>
+                        <li>Adobe XD</li>
+                        <li>UI/UX</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                         <div class="skill-icon" style="background:none; border-radius:0; display:flex; justify-content:center; gap:4px; margin:0 auto;">
+                        <img src="w4.png" style="width:50px; height:50px; display:block;">
+                    </div>
+                    </div>
+                    <h4>Инструменты</h4>
+                    <ul class="skill-list">
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>npm/yarn</li>
+                        <li>Chrome DevTools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с демонстрацией выполненных проектов с описаниями и ссылками -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Веб-проекты</h2>
+            <p class="section-subtitle">Мои лучшие работы и достижения</p>
+
+            <div class="projects-grid">
+                <a href="project1/german_empire.html" target="_blank" style="text-decoration:none; color:inherit;">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="a2.jpg" >
+                    </div>
+                    <div class="project-content">
+                        <h5>Сайт о истории Германской империи</h5>
+                        <p>Информационный ресурс о Германской империи с историческими статьями, интерактивными картами, биографиями правителей и ключевыми событиями периода.</p>
+                        Для создания сайта использовались HTML и CSS, реализованы интерактивные карты, информационные карточки и таблицы.
+                    </div>
+                </div>
+                </a>
+
+                <a href="project2/test.html" target="_blank" style="text-decoration:none; color:inherit;">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="a1.jpg" >
+                    </div>
+                    <div class="project-content">
+                        <h5>Сайт-тест по истории</h5>
+                        <p>Интерактивный тест по истории с вопросами разных тем, случайным выбором заданий, системой подсчёта баллов и оценкой результатов.</p>
+                       Для создания сайта использовались HTML, CSS и JavaScript, реализована система подсчёта баллов, рандомайзер для случайного выбора вопросов и интерактивная проверка ответов.
+                    </div>
+                </div>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с информацией об образовании и полученных сертификатах -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Образование и сертификаты</h2>
+            <p class="section-subtitle">Мой академический путь и профессиональное развитие</p>
+
+            <div class="education-grid">
+                <div class="edu-left">
+                    <h6 class="edu-heading"><img src="s1.png" alt="Образование" class="edu-icon">Образование</h6>
+
+                    <div class="edu-item">
+                        <h6>Colegiul Tehnic Feroviar din Bălți</h6>
+                        <p>Специализация в области разработки программного обеспечения</p>
+                    </div>
+
+                    <div class="edu-item">
+                        <h6>Gimnaziul №14 </h6>
+                        <p>Углубленное изучение математики и информатики</p>
+                    </div>
+                </div>
+
+                <div class="edu-right">
+                    <h6 class="edu-heading"><img src="s2.png" alt="Сертификаты" class="edu-icon">Сертификаты</h6>
+
+                    <div class="cert-card">
+                        
+                        <div class="cert-content">
+                            <strong>Курс веб-дизайна Tekwil</strong>
+                            <div class="cert-sub">Профессиональная подготовка специалистов по веб-разработке и дизайну</div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        
+                        <div class="cert-content">
+                            <strong>Республиканская олимпиада по информатике 2023</strong>
+                            <div class="cert-sub">14-е место в республиканском зачете по прикладной информатике</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="continuous-title">Постоянное обучение</h3>
+            <p class="continuous-sub">Регулярно прохожу онлайн-курсы и получаю сертификаты для повышения квалификации</p>
+        </div>
+    </section>
+
+    <!-- Секция с контактной информацией и формой для отправки сообщений -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <h2 class="section-title"><img src="k1.png" alt="Свяжитесь со мной" class="edu-icon">Свяжитесь со мной</h2>
+            <p class="section-subtitle">Я всегда открыт для новых возможностей и сотрудничества</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <div class="info-item">
+                        <img src="k2.png" alt="Email" class="edu-icon">
+                        <strong>Email</strong>
+                        <div>vasiliy.vasiliev@gmail.com</div>
+                    </div>
+                    <div class="info-item">
+                        <img src="k3.png" alt="Телефон" class="edu-icon">
+                        <strong>Телефон</strong>
+                        <div>+123456789</div>
+                    </div>
+                    <div class="info-item">
+                        <img src="k4.png" alt="Местоположение" class="edu-icon">
+                        <strong>Местоположение</strong>
+                        <div>Бельцы, Молдова</div>
+                    </div>
+
+                    <div class="availability">
+                        <h7>Доступен для проектов</h7>
+                        <p>Ищу возможности для стажировок и участия в интересных проектах. Буду рад обсудить сотрудничество!</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <label>Ваше имя
+                            <input id="contact-name" type="text" name="name" placeholder="Иван Иванов">
+                        </label>
+
+                        <label>Email
+                            <input id="contact-email" type="email" name="email" placeholder="ivan@gmail.com">
+                        </label>
+
+                        <label>Сообщение
+                            <textarea id="contact-message" name="message" rows="6" placeholder="Расскажите о вашем проекте или предложении..."></textarea>
+                        </label>
+
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Нижняя часть страницы с информацией об авторе и копирайтом -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h8>Василий Васильев</h8>
+                <p>Студент-разработчик</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Василий Васильев. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript файлов для интерактивности страницы -->
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>

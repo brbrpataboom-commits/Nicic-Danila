@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Германская империя 1871–1918</title>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #d00;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Германская империя 1871–1918</h1>
+    </header>
+    <nav>
+        <a href="#section1">Франко-прусская война</a>
+        <a href="#section2">Экономическое развитие</a>
+        <a href="#section3">Великая война</a>
+    </nav>
+    <section id="section1">
+        <h2>Франко-прусская война и образование Германии (1870–1871)</h2>
+        <p>Франко-прусская война стала ключевым событием, приведшим к объединению Германии под руководством Пруссии. В 1871 году была провозглашена Германская империя.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Франко-прусская война">
+    </section>
+    <section id="section2">
+        <h2>Экономическое развитие и соперничество с Францией и Англией (1871–1914)</h2>
+        <p>Германская империя пережила бурный экономический рост, став одной из ведущих индустриальных держав мира. Это вызвало напряжение с другими великими державами.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Экономическое развитие">
+    </section>
+    <section id="section3">
+        <h2>Великая война и конец империи (1914–1918)</h2>
+        <p>Первая мировая война стала катастрофой для Германской империи. В 1918 году империя прекратила своё существование, уступив место Веймарской республике.</p>
+        <img src="https://via.placeholder.com/800x400" alt="Великая война">
+    </section>
+    <footer>
+        © Данил Ничик, 2025
+    </footer>
+</body>
+</html>

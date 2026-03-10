@@ -1,0 +1,798 @@
+/* Этот CSS файл определяет стили для портфолио-сайта, включая сброс стилей, переменные, и стили для всех секций. */
+
+/* Сброс стандартных стилей браузера для единообразия */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS переменные для цветов и переходов */
+:root {
+    --primary-color: #0052CC;
+    --text-dark: #1a1a1a;
+    --text-light: #666;
+    --bg-light: #f5f5f5;
+    --border-color: #e0e0e0;
+    --transition: all 0.3s ease;
+}
+
+/* Основные стили для body: шрифт, цвет текста, фон */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Навигация: фиксированная панель вверху с логотипом и меню */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-item {
+    display: list-item;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #0052cc;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0052cc;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    margin: 5px 0;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+/* Главная секция: приветствие, описание и фото профиля */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-subtitle {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero-bio {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0042a0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 82, 204, 0.2);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Адаптивный дизайн: медиа-запросы для мобильных устройств (Главная секция)*/
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    .nav-menu.active {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        z-index: 99;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-links {
+        left: 1rem;
+        bottom: 1rem;
+        flex-direction: row;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+}
+
+/* Медиа-запрос для очень маленьких экранов (телефоны) */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        gap: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Секция "О себе": стили для биографии и карточек с качествами */
+.about-section {
+    padding: 4rem 1rem 6rem;
+    background: #fff;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-dark);
+    opacity: 0.75;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-bio {
+    background: linear-gradient(90deg, rgba(27,160,200,0.04), rgba(13,77,125,0.03));
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    color: var(--text-dark);
+    box-shadow: 0 6px 18px rgba(13,77,125,0.03);
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.about-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+.about-card h3 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.about-card p {
+    margin-top: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    background: radial-gradient(circle at 30% 20%, #9b6bff, #4b6bff);
+}
+
+/* Медиа-запрос для планшетов в секции "О себе" */
+@media (max-width: 992px) {
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Секция "Мои навыки": сетка с карточками навыков по категориям */
+.skills-section {
+    padding: 4rem 1rem 6rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
+    text-align: center; /* центрируем заголовки и подписи */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 82, 204, 0.12);
+}
+
+
+/* Иконки: убираем круглый градиентный фон по умолчанию (будет чистый inline-иконка) */
+.skill-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    background: none;
+    color: inherit;
+    overflow: visible;
+}
+
+/* Убираем синий круглый фон для иконок в секции навыков */
+.skills-grid .skill-icon {
+    background: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* предотвращаем обрезание толстых линий при масштабировании */
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* Секция проектов: сетка с карточками проектов и ссылками */
+.projects-section {
+    padding: 4rem 1rem 6rem;
+    background: #fff;
+    text-align: center;
+}
+.projects-grid {
+    display: grid;
+    /* позволяет автоматически подбирать количество колонок, минимальная ширина 280px, расширяет до заполнения,
+       чтобы карточки оставались по центру и переносились при необходимости */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+}
+
+/* Медиа-запрос для маленьких экранов в секции проектов */
+@media (max-width: 600px) {
+    .projects-grid { grid-template-columns: 1fr; }
+}
+.project-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+.project-image img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+.project-content {
+    padding: 1.25rem;
+    text-align: left;
+}
+.project-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+}
+.project-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+}
+.tag {
+    background: rgba(75,107,255,0.08);
+    color: #2b5dd6;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+.project-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* Медиа-запрос для очень маленьких экранов в секции проектов */
+@media (max-width: 600px) {
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Секция образования: сетка с образованием и сертификатами */
+.education-section {
+    padding: 4rem 1rem 6rem;
+    background: #fff;
+    text-align: center;
+}
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 1.5rem;
+}
+.edu-left, .edu-right { text-align: left; }
+.edu-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+.edu-heading img {
+    width: 24px;
+    height: 24px;
+}
+
+.edu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.edu-item {
+    background: linear-gradient(90deg, rgba(75,107,255,0.03), rgba(75,107,255,0.01));
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2b5dd6;
+}
+.edu-item h4 { margin: 0 0 0.25rem 0; font-size: 1rem; }
+.edu-item p { margin: 0; color: var(--text-light); }
+.cert-card {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(75,107,255,0.03), rgba(75,107,255,0.01));
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.9rem;
+    border-left: 4px solid #2b5dd6;
+}
+.cert-icon { width: 44px; height: 44px; border-radius: 8px; display:flex; align-items:center; justify-content:center; background: rgba(75,107,255,0.12); }
+.cert-content strong { display:block; font-size:0.98rem; }
+.cert-sub { color: var(--text-light); font-size:0.9rem; }
+.continuous-title { text-align:center; margin-top:1.75rem; font-size:1.25rem; }
+.continuous-sub { text-align:center; color:var(--text-light); margin-top:0.5rem; }
+
+/* Медиа-запрос для планшетов в секции образования */
+@media (max-width: 992px) {
+    .education-grid { grid-template-columns: 1fr; }
+}
+
+.skill-list {
+    list-style: none;
+    text-align: left;
+}
+
+.skill-list li {
+    color: var(--text-light);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.skill-list li:before {
+    content: "\2022";
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+/* Медиа-запрос для планшетов в секции навыков */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Медиа-запрос для маленьких экранов в секциях навыков и о себе */
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Секция контактов: сетка с контактной информацией и формой */
+.contact-section {
+    padding: 4rem 1rem 6rem;
+    background: #fff;
+}
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    align-items: stretch;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+.info-item {
+    padding: 0.6rem 0;
+}
+.info-item strong {
+    display: block;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+.availability {
+    margin-top: 1.5rem;
+    background: rgba(75,107,255,0.06);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(75,107,255,0.12);
+}
+.contact-form label { display:block; margin-bottom:0.75rem; color:var(--text-dark); font-size:0.95rem; }
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+.contact-form textarea { min-height: 250px; resize: vertical; }
+.contact-form .btn-primary { width: 100%; }
+
+/* Медиа-запрос для планшетов и мобильных в секции контактов */
+@media (max-width: 992px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-info { order: 2; }
+    .contact-form { order: 1; }
+}
+
+/* Футер: нижняя часть страницы с информацией об авторе */
+.footer {
+    background: #0f1419;
+    color: #7a8fa0;
+    padding: 3rem 1rem 1.5rem;
+    margin-top: 4rem;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-left h3 {
+    margin: 0 0 0.25rem 0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.footer-left p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #7a8fa0;
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: #5a6b7a;
+    font-size: 0.9rem;
+}
+.footer-bottom p { margin: 0; }
+
+
+
+
+
+
+
+
